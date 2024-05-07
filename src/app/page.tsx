@@ -1,4 +1,4 @@
-"use client"; // Mark as a Client Component
+"use client"; 
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -7,10 +7,10 @@ const DefaultPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/signup"); // Redirect to the signup page by default
+    router.push("/signup"); 
   }, []);
 
-  return <div>Loading...</div>; // Simple loading state during redirect
+  return <div>Loading...</div>; 
 };
 
 export default DefaultPage;

@@ -19,7 +19,7 @@ const Signup = () => {
         throw new Error("Password must be at least 6 characters long");
       }
       await createUserWithEmailAndPassword(auth, email, password);
-      router.push("/login"); // Redirect to login after sign-up
+      router.push("/login"); 
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         setError("This email address is already registered. Please log in.");
@@ -35,7 +35,7 @@ const Signup = () => {
   const handleGoogleSignup = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      router.push("/home"); // Redirect to home if Google sign-up is successful
+      router.push("/home");  successful
     } catch (error) {
       setError("Error with Google sign-in. Please try again.");
       console.error("Error with Google sign-in:", error);
